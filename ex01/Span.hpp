@@ -5,6 +5,7 @@
 #include <vector>
 #include <exception>
 #include <algorithm>
+#include <ctime>
 
 class Span
 {
@@ -21,10 +22,14 @@ class Span
 
 	public:
 		void addNumber(int n);
+		void addNumber(std::vector<int>::iterator start, int size);
 		int shortestSpan();
 		int longestSpan();
-		unsigned int getSize() const;
-		void bubbleSort();
+		std::vector<int>::iterator getBegin();
+		void display();
+
+	private:
+		static int	generateRandom();
 
 	private:
 		class fullArray: public std::exception

@@ -24,8 +24,8 @@ int main()
 			std::cout << shortest << std::endl;
 		if (longest >= 0)
 			std::cout << longest << std::endl;
-		sp.addNumber(10);
-		sp.addNumber(15);
+		sp.addNumber(sp.getBegin() + 1, 2);
+		sp.display();
 		shortest = sp.shortestSpan();
 		longest = sp.longestSpan();
 		if (shortest >= 0)
