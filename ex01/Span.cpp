@@ -47,18 +47,11 @@ void Span::addNumber(int n)
 
 void	Span::addNumber(std::vector<int>::iterator start, int size)
 {
-	try
-	{
-		u_int32_t	new_size = start - this->v.begin() + size;
-		if (new_size > this->size)
-			throw (Span::fullArray());
-		for (int i = 0; i < size; i++)
-			this->v.push_back(Span::generateRandom());
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
+	u_int32_t	new_size = start - this->v.begin() + size;
+	if (new_size > this->size)
+		throw (Span::fullArray());
+	for (int i = 0; i < size; i++)
+		this->v.push_back(Span::generateRandom());
 }
 
 int Span::longestSpan()
