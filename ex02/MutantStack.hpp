@@ -21,7 +21,7 @@ class MutantStack: public std::stack<T>
 		MutantStack &operator=(const MutantStack &src)
 		{
 			if (this != src)
-				this.c = src.c;
+				this->c = src->c;
 			return *this;
 		}
 		~MutantStack(){}
